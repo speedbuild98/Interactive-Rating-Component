@@ -24,7 +24,7 @@ body{
 }
 
 .Caja1{
-  background-color:hsl(213, 19%, 18%);
+  background-color:#1F2630;
   width:375px;
   height:375px;
   border-radius:20px;
@@ -73,14 +73,15 @@ body{
 }
 
 .BotonEstrella{
-  width:36px;
-  height:36px;
+  width:45px;
+  height:45px;
   border-radius:50%;
-  background-color: hsl(216, 12%, 54%);
+  background-color: #28303A;
   border:none;
   color: hsl(25, 97%, 53%);
   font-size: 20px;
   text-align: center;
+  padding-top: 6px;
 }
 
 .ratings {
@@ -101,10 +102,10 @@ input[type="radio"] {
 
 input[type="radio"] + p {
   border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  padding: 10px;
-  background-color: var(--medium-grey);
+  width:45px;
+  height:45px;
+  padding: 13px;
+  background-color: #28303A;
   color: var(--white);
   text-align: center;
 }
