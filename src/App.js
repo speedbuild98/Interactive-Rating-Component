@@ -6,8 +6,8 @@ function App() {
   return (
     <div className="App">
       <main>
-        <div id='main' className='Caja1'>
-          <div className='BotonEstrella'><img src={Estrella}/></div>
+        <div id='cajita1' className='Caja1'>
+          <div className='BotonEstrella'><img alt="Estrellita" src={Estrella}/></div>
           <div className='ContainerTexto'>
             <h1>How did we do?</h1>
             <p>Please let us know how we did with your support request. All feedback is appreciated 
@@ -35,7 +35,21 @@ function App() {
             <p>5</p>
           </label>
           </div>
-           <button className='Boton' onClick="submit()">SUBMIT</button>
+           <button className='Boton' onClick={function() {
+        const value = document.querySelector(
+          'input[name="rating"]:checked'
+        ).value;
+
+        let cajita1 = document.getElementById("cajita1");
+        cajita1.classList.add("hidden");
+
+        let thanks = document.getElementById("thanks");
+        thanks.classList.toggle("hidden");
+
+        document.getElementById(
+          "selection"
+        ).innerHTML = `You selected ${value} out of 5`;
+      }}>SUBMIT</button>
         </div>
         <div className="Caja2 card__thank-you hidden" id="thanks">
           <img src={Gracias} alt="thank-you" />
@@ -47,37 +61,15 @@ function App() {
           </p>
       </div>
         <div className="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="https://devgallardo.netlify.app/">GALLARDO</a>.
+      Challenge by <a rel="noreferrer" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a rel="noreferrer" href="https://devgallardo.netlify.app/">GALLARDO</a>.
       </div>
       </main>
     </div>
   );
-  function submit({}) {
-    alert('Se ha dado clic al botón!');
-  }
 }
 
 export default App;
 
 
 
-/*  <!-- Rating state start -->
-  
-
-1 2 3 4 5
-
-Submit
-
-<!-- Rating state end -->
-
-<!-- Thank you state start -->
-
-You selected <!-- Add rating here --> out of 5
-
-Thank you!
-
-We appreciate you taking the time to give a rating. If you ever need more support, 
-don’t hesitate to get in touch!
-
-<!-- Thank you state end --> */ 

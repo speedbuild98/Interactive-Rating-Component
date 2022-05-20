@@ -133,7 +133,6 @@ input[type="radio"]:focus + p {
   margin: 100px auto;
   padding: 24px;
   text-align:center;
-  display: none;
 }
 
 #thanks h1{
@@ -175,10 +174,6 @@ input[type="radio"]:focus + p {
 }
 
 
-  
-
-
-
 #selection {
   color: var(--orange)!important;
   background-color: hsl(213, 19%, 25%);
@@ -197,4 +192,8 @@ input[type="radio"]:focus + p {
     width: 410px;
     height: 440px;
   }
+}
+
+.hidden{
+  display: none;
 }
