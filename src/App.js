@@ -6,14 +6,14 @@ function App() {
   return (
     <div className="App">
       <main>
-        <div className='Caja1'>
+        <div id='main' className='Caja1'>
           <div className='BotonEstrella'><img src={Estrella}/></div>
           <div className='ContainerTexto'>
             <h1>How did we do?</h1>
             <p>Please let us know how we did with your support request. All feedback is appreciated 
             to help us improve our offering!</p>
           </div> 
-          <div class="ContainerBotones ratings">
+          <div className="ContainerBotones ratings">
           <label for="1">
             <input className='Botones' type="radio" name="rating" value="1" id="1" />
             <p>1</p>
@@ -34,39 +34,27 @@ function App() {
             <input className='Botones' type="radio" name="rating" value="5" id="5" />
             <p>5</p>
           </label>
+          </div>
+           <button className='Boton' onClick="submit()">SUBMIT</button>
         </div>
-           <button className='Boton' onClick='submit'>SUBMIT</button>
-        </div>
-        <div class="card__thank-you hidden" id="thanks">
-        <img src={Gracias} alt="thank-you" />
-        <p id="selection"></p>
-        <h1>Thank You!</h1>
-        <p>
-          We appreciate you taking the time to give a rating. If you ever need
-          more support, dont't hesitate to get in touch!
-        </p>
+        <div className="Caja2 card__thank-you hidden" id="thanks">
+          <img src={Gracias} alt="thank-you" />
+          <p id="selection"></p>
+          <h1>Thank You!</h1>
+          <p>
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, dont't hesitate to get in touch!
+          </p>
       </div>
-        <div class="attribution">
+        <div className="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="https://devgallardo.netlify.app/">GALLARDO</a>.
       </div>
       </main>
     </div>
   );
-  function submit(e) {
-    const value = document.querySelector(
-      'input[name="rating"]:checked'
-    ).value;
-
-    let main = document.getElementById("main");
-    main.classList.add("hidden");
-
-    let thanks = document.getElementById("thanks");
-    thanks.classList.toggle("hidden");
-
-    document.getElementById(
-      "selection"
-    ).innerHTML = `You selected ${value} out of 5`;
+  function submit({}) {
+    alert('Se ha dado clic al botón!');
   }
 }
 
