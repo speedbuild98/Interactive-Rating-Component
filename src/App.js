@@ -61,7 +61,7 @@ function App() {
           </p>
       </div>
         <div className="attribution">
-      Challenge by <a rel="noreferrer" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Challenge by <a rel="noreferrer" href="https://www.frontendmentor.io/profile/speedbuild98" target="_blank">Frontend Mentor</a>. 
       Coded by <a rel="noreferrer" href="https://devgallardo.netlify.app/">GALLARDO</a>.
       </div>
       </main>
